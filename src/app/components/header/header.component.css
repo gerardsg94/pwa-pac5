@@ -1,0 +1,38 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.toolbar {
+    background-image: url(../../../assets/img/spectrum-gradient.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: auto;
+    display: grid;
+    padding-bottom: 10px;
+}
+
+.teams-nav {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    border: 4px solid #e8521e;
+    border-radius: 20px;
+}
+
+.bg-nav {
+    border: 4px solid black;
+    border-radius: 24px;
+}
+
+.logo {
+    margin: auto;
+}
+
+h1 {
+  margin: auto; 
+  font-size: 30px; 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  

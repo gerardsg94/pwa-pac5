@@ -1,0 +1,57 @@
+
+<div class="spinner" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+</div>
+<div [ngClass]="isLoading ? 'loading':''">
+<div class="block" *ngIf="gif">
+    <div class="container">
+        <div class="ms-auto p-2 d-flex bd-highlight mb-3">
+            <a type="button" class="btn btn-dark btn-lg mt-2 bd-highlight" routerLink="/">Back</a>
+        </div>
+    </div>
+    
+    <div class="container mx-auto my-auto mt-5 animate_animated animate_bounce animate_fadeIn">
+        
+        <div class="bg-img p-4 d-flex-col">
+            <img src="{{gif.images.original.webp}}" alt="{{gif.title}}">
+            <h1 style="margin: auto; text-align: center;">{{gif.title}}</h1>
+        </div>
+
+        
+        <div class="info d-flex-col px-4 py-4">
+            <h1 class="my-auto">INFOMATION</h1>
+
+            <p><strong>URL: </strong> {{gif.url}}</p>
+            <p><strong>Autor: </strong> {{gif.username}}</p>
+            <p><strong>Rating: </strong> {{gif.rating}} </p>
+            <p><strong>Date: </strong> {{gif.import_datetime}} </p>
+            <p><strong>Size: </strong>{{gif.images.original.width}} x {{gif.images.original.height}} </p>
+
+
+            <mat-accordion>
+                <mat-expansion-panel hideToggle>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                     <h2>Gifs Format</h2>
+                    </mat-panel-title>
+                    <mat-panel-description class="ms-auto d-flex bd-highlight mb-3">
+                        <button class="ms-auto bd-highlight" mat-button>More information <mat-icon>add</mat-icon> </button>
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <ul>
+                    <li><strong>Original: </strong><a href="{{gif.images.original.webp}}">{{gif.images.original.webp}}</a></li>
+                    <li><strong>DownSized: </strong><a href="{{gif.images.downsized.url}}">{{gif.images.downsized.url}}</a></li>
+                    <li><strong>Fixed Height: </strong><a href="{{gif.images.fixed_height.url}}">{{gif.images.fixed_height.url}}</a></li>
+                    <li><strong>Looping: </strong><a href="{{gif.images.looping.mp4}}">{{gif.images.looping.mp4}}</a></li>
+                    <li><strong>Preview: </strong><a href="{{gif.images.preview.mp4}}">{{gif.images.preview.mp4}}</a></li>
+                  </ul>
+                </mat-expansion-panel>
+              </mat-accordion>
+
+            
+        </div>       
+    </div>
+
+</div>
+</div>
+
